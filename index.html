@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CANCEL ? — Le jeu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="masthead">
+  <h1>CANCEL <span>?</span></h1>
+  <p class="kicker">le jeu qui teste ta culture des scandales</p>
+</div>
+
+<main id="app">
+
+  <!-- ECRAN 1 : PSEUDO -->
+  <section id="screen-pseudo" class="screen active">
+    <label for="pseudo-input">Ton pseudo</label>
+    <input id="pseudo-input" type="text" maxlength="16" placeholder="ex: JournalisteDuDimanche" autocomplete="off">
+    <button id="btn-pseudo-valider" class="btn-primary">Continuer</button>
+    <p class="error" id="pseudo-error"></p>
+  </section>
+
+  <!-- ECRAN 2 : CREER / REJOINDRE -->
+  <section id="screen-lobby-choice" class="screen">
+    <p class="hello">Salut <span id="hello-pseudo"></span> 👋</p>
+
+    <div class="card">
+      <h2>Créer un salon</h2>
+      <input id="create-room-input" type="text" maxlength="20" placeholder="nom du salon" autocomplete="off">
+      <button id="btn-create-room" class="btn-primary">Créer</button>
+    </div>
+
+    <div class="card">
+      <h2>Rejoindre un salon</h2>
+      <input id="join-room-input" type="text" maxlength="20" placeholder="nom du salon" autocomplete="off">
+      <button id="btn-join-room" class="btn-secondary">Rejoindre</button>
+    </div>
+
+    <p class="error" id="lobby-error"></p>
+  </section>
+
+  <!-- ECRAN 3 : SALLE D'ATTENTE -->
+  <section id="screen-waiting" class="screen">
+    <p class="room-label">Salon : <strong id="waiting-room-name"></strong></p>
+    <h2>Joueurs présents</h2>
+    <ul id="players-list"></ul>
+    <button id="btn-start-game" class="btn-primary">Lancer la partie</button>
+    <p class="hint" id="waiting-hint">En attente que l'hôte lance la partie…</p>
+  </section>
+
+  <!-- ECRAN 4 : ROUND EN COURS -->
+  <section id="screen-round" class="screen">
+    <div class="timer-bar-wrap"><div class="timer-bar" id="timer-bar"></div></div>
+    <p class="round-counter" id="round-counter">Round 1 / 10</p>
+
+    <div class="personality-card">
+      <h2 id="personality-name">—</h2>
+      <p class="personality-milieu" id="personality-milieu">—</p>
+    </div>
+
+    <div id="vote-buttons" class="vote-buttons">
+      <button class="stamp stamp-cancel" data-vote="oui">CANCEL</button>
+      <button class="stamp stamp-safe" data-vote="non">PAS CANCEL</button>
+    </div>
+
+    <div id="bonus-block" class="bonus-block hidden">
+      <p>Coche la ou les raisons (si tu en vois plusieurs) :</p>
+      <div class="bonus-options">
+        <label><input type="checkbox" value="VSS"> VSS</label>
+        <label><input type="checkbox" value="pedocriminalite"> Pédocriminalité</label>
+        <label><input type="checkbox" value="racisme"> Racisme</label>
+        <label><input type="checkbox" value="delit/crime"> Délit / crime</label>
+      </div>
+      <button id="btn-valider-bonus" class="btn-primary">Valider mes réponses</button>
+    </div>
+
+    <p class="waiting-others hidden" id="waiting-others">Réponse enregistrée, en attente des autres joueurs…</p>
+  </section>
+
+  <!-- ECRAN 5 : REVELATION -->
+  <section id="screen-reveal" class="screen">
+    <div class="reveal-card" id="reveal-card">
+      <p class="reveal-verdict" id="reveal-verdict">—</p>
+      <h2 id="reveal-name">—</h2>
+      <p class="reveal-explication" id="reveal-explication">—</p>
+    </div>
+    <h3>Scores du round</h3>
+    <ul id="round-scores"></ul>
+    <button id="btn-next-round" class="btn-primary">Round suivant</button>
+    <p class="hint" id="reveal-hint">En attente de l'hôte pour continuer…</p>
+  </section>
+
+  <!-- ECRAN 6 : SCORES FINAUX -->
+  <section id="screen-final" class="screen">
+    <h2>Résultats finaux</h2>
+    <ul id="final-scores"></ul>
+    <button id="btn-replay" class="btn-primary">Rejouer</button>
+  </section>
+
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

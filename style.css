@@ -1,0 +1,277 @@
+:root {
+  --ink: #14100f;
+  --paper: #f2ede1;
+  --paper-dim: #c9c2b0;
+  --red: #e63b2e;
+  --yellow: #f5c518;
+  --muted: #8a8377;
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+.masthead {
+  text-align: center;
+  padding: 28px 16px 12px;
+  border-bottom: 4px solid var(--paper);
+}
+
+.masthead h1 {
+  font-family: var(--font-display);
+  font-size: 48px;
+  letter-spacing: 2px;
+  margin: 0;
+  color: var(--paper);
+}
+
+.masthead h1 span { color: var(--red); }
+
+.kicker {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.screen { display: none; }
+.screen.active { display: block; }
+
+label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background: var(--paper);
+  color: var(--ink);
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 12px;
+  font-family: var(--font-body);
+}
+
+button {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 15px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primary {
+  background: var(--red);
+  color: var(--paper);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--paper);
+  border: 2px solid var(--paper);
+}
+
+.error {
+  color: var(--red);
+  font-size: 13px;
+  min-height: 18px;
+}
+
+.hello {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 2px solid var(--paper-dim);
+  padding: 18px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.card h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+}
+
+.room-label {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.room-label strong { color: var(--paper); }
+
+#players-list, #round-scores, #final-scores {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 24px;
+}
+
+#players-list li, #round-scores li, #final-scores li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--paper-dim);
+  font-size: 15px;
+}
+
+.hint {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 14px;
+}
+
+.timer-bar-wrap {
+  height: 6px;
+  background: var(--paper-dim);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.timer-bar {
+  height: 100%;
+  background: var(--red);
+  width: 100%;
+  transition: width 0.2s linear;
+}
+
+.round-counter {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 16px;
+}
+
+.personality-card {
+  border: 3px solid var(--paper);
+  padding: 32px 16px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.personality-card h2 {
+  font-family: var(--font-display);
+  font-size: 34px;
+  letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.personality-milieu {
+  color: var(--muted);
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.vote-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stamp {
+  flex: 1;
+  padding: 22px 8px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 1px;
+  border: 3px solid currentColor;
+  border-radius: 6px;
+  background: transparent;
+  transform: rotate(-1.5deg);
+}
+
+.stamp-cancel {
+  color: var(--red);
+}
+
+.stamp-safe {
+  color: var(--yellow);
+  transform: rotate(1.5deg);
+}
+
+.stamp:disabled {
+  opacity: 0.35;
+}
+
+.bonus-block {
+  border-top: 2px dashed var(--paper-dim);
+  padding-top: 18px;
+}
+
+.bonus-block.hidden, .waiting-others.hidden { display: none; }
+
+.bonus-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 14px 0 18px;
+}
+
+.bonus-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  background: rgba(242,237,225,0.06);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.waiting-others {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.reveal-card {
+  text-align: center;
+  padding: 28px 16px;
+  margin-bottom: 20px;
+  border: 3px solid var(--paper);
+}
+
+.reveal-verdict {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin: 0 0 6px;
+}
+
+.reveal-card h2 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  margin: 0 0 12px;
+}
+
+.reveal-explication {
+  color: var(--paper-dim);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}

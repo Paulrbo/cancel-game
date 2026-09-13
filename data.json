@@ -1,0 +1,93 @@
+[
+  {
+    "nom": "Michael Jackson",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "pedocriminalite",
+    "raison": "Accusé par plusieurs hommes (Wade Robson, James Safechuck) d'abus sexuels sur mineur, notamment dans le documentaire Leaving Neverland (2019). Jamais condamné pénalement ; acquitté en 2005 sur des faits similaires. Règlements financiers à l'amiable dans les années 1990."
+  },
+  {
+    "nom": "Johnny Depp",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé de violences conjugales par son ex-femme Amber Heard. Procès en diffamation très médiatisé en 2022, remporté par Depp, qui a lui-même accusé Heard de violences. Aucune condamnation pénale."
+  },
+  {
+    "nom": "Woody Allen",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "pedocriminalite",
+    "raison": "Accusé par sa fille adoptive Dylan Farrow de l'avoir agressée sexuellement en 1992, alors qu'elle avait 7 ans. Jamais poursuivi ni condamné."
+  },
+  {
+    "nom": "Kevin Spacey",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé par l'acteur Anthony Rapp et plusieurs autres hommes de harcèlement ou d'agressions sexuelles. Acquitté en 2023 à Londres, mais condamné au civil à 31 millions de dollars envers la production de House of Cards."
+  },
+  {
+    "nom": "Roman Polanski",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "pedocriminalite",
+    "raison": "Arrêté en 1977 pour le viol d'une adolescente de 13 ans. A plaidé coupable de rapports sexuels illégaux avec une mineure. En fuite des États-Unis depuis 1978."
+  },
+  {
+    "nom": "Chris Brown",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "A plaidé coupable d'agression sur sa compagne de l'époque, la chanteuse Rihanna, en 2009. Condamné à cinq ans de mise à l'épreuve et des travaux d'intérêt général."
+  },
+  {
+    "nom": "Marine Le Pen",
+    "milieu": "Politique",
+    "cancel": "oui",
+    "categorie": "delit/crime",
+    "raison": "Condamnée en première instance et en appel pour détournement de fonds publics dans l'affaire des assistants parlementaires du Rassemblement National au Parlement européen."
+  },
+  {
+    "nom": "Nicolas Sarkozy",
+    "milieu": "Politique",
+    "cancel": "oui",
+    "categorie": "delit/crime",
+    "raison": "Condamné en septembre 2025 à cinq ans de prison ferme pour association de malfaiteurs dans l'affaire du financement libyen de sa campagne présidentielle de 2007."
+  },
+  {
+    "nom": "Gérard Depardieu",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Condamné en mai 2025 à 18 mois de prison avec sursis pour agressions sexuelles sur deux femmes lors du tournage du film Les Volets verts en 2021."
+  },
+  {
+    "nom": "Karim Benzema",
+    "milieu": "Sport",
+    "cancel": "oui",
+    "categorie": "delit/crime",
+    "raison": "Condamné en 2021 pour complicité de tentative de chantage à la sextape contre son ancien coéquipier Mathieu Valbuena."
+  },
+  {
+    "nom": "Stéphane Plaza",
+    "milieu": "TV/Animation",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Condamné en février 2025 à douze mois de prison avec sursis pour violences habituelles sur une ex-compagne."
+  },
+  { "nom": "Jean-Jacques Goldman", "milieu": "Musique", "cancel": "non", "categorie": "", "raison": "Figure très appréciée du public français, sans controverse majeure recensée." },
+  { "nom": "Omar Sy", "milieu": "Cinéma", "cancel": "non", "categorie": "", "raison": "Acteur parmi les plus populaires en France, sans polémique notable." },
+  { "nom": "Zinédine Zidane", "milieu": "Sport", "cancel": "non", "categorie": "", "raison": "Légende du football français, sans controverse notable en dehors du terrain." },
+  { "nom": "Sophie Marceau", "milieu": "Cinéma", "cancel": "non", "categorie": "", "raison": "Actrice appréciée depuis les années 1980, sans polémique majeure." },
+  { "nom": "Thomas Pesquet", "milieu": "Science", "cancel": "non", "categorie": "", "raison": "Astronaute très populaire, sans controverse connue." },
+  { "nom": "Teddy Riner", "milieu": "Sport", "cancel": "non", "categorie": "", "raison": "Champion olympique de judo, image publique consensuelle." },
+  { "nom": "Antoine Dupont", "milieu": "Sport", "cancel": "non", "categorie": "", "raison": "Capitaine du XV de France, sans polémique notable." },
+  { "nom": "Florence Foresti", "milieu": "Humour", "cancel": "non", "categorie": "", "raison": "Humoriste très populaire, sans controverse majeure." },
+  { "nom": "Jamel Debbouze", "milieu": "Humour", "cancel": "non", "categorie": "", "raison": "Humoriste et acteur populaire, sans affaire judiciaire connue." },
+  { "nom": "Vanessa Paradis", "milieu": "Musique", "cancel": "non", "categorie": "", "raison": "Chanteuse et actrice appréciée, sans polémique notable." },
+  { "nom": "Léon Marchand", "milieu": "Sport", "cancel": "non", "categorie": "", "raison": "Nageur multi-champion olympique, image publique très positive." },
+  { "nom": "Catherine Deneuve", "milieu": "Cinéma", "cancel": "non", "categorie": "", "raison": "Icône du cinéma français, sans affaire judiciaire personnelle." },
+  { "nom": "Juliette Binoche", "milieu": "Cinéma", "cancel": "non", "categorie": "", "raison": "Actrice oscarisée, sans controverse notable." },
+  { "nom": "Kylian Mbappé", "milieu": "Sport", "cancel": "non", "categorie": "", "raison": "Star du football, aucune condamnation ni mise en cause aboutie." }
+]
