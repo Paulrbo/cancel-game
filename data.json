@@ -76,18 +76,1418 @@
     "categorie": "VSS",
     "raison": "Condamné en février 2025 à douze mois de prison avec sursis pour violences habituelles sur une ex-compagne."
   },
-  { "nom": "Jean-Jacques Goldman", "milieu": "Musique", "cancel": "non", "categorie": "", "raison": "Figure très appréciée du public français, sans controverse majeure recensée." },
-  { "nom": "Omar Sy", "milieu": "Cinéma", "cancel": "non", "categorie": "", "raison": "Acteur parmi les plus populaires en France, sans polémique notable." },
-  { "nom": "Zinédine Zidane", "milieu": "Sport", "cancel": "non", "categorie": "", "raison": "Légende du football français, sans controverse notable en dehors du terrain." },
-  { "nom": "Sophie Marceau", "milieu": "Cinéma", "cancel": "non", "categorie": "", "raison": "Actrice appréciée depuis les années 1980, sans polémique majeure." },
-  { "nom": "Thomas Pesquet", "milieu": "Science", "cancel": "non", "categorie": "", "raison": "Astronaute très populaire, sans controverse connue." },
-  { "nom": "Teddy Riner", "milieu": "Sport", "cancel": "non", "categorie": "", "raison": "Champion olympique de judo, image publique consensuelle." },
-  { "nom": "Antoine Dupont", "milieu": "Sport", "cancel": "non", "categorie": "", "raison": "Capitaine du XV de France, sans polémique notable." },
-  { "nom": "Florence Foresti", "milieu": "Humour", "cancel": "non", "categorie": "", "raison": "Humoriste très populaire, sans controverse majeure." },
-  { "nom": "Jamel Debbouze", "milieu": "Humour", "cancel": "non", "categorie": "", "raison": "Humoriste et acteur populaire, sans affaire judiciaire connue." },
-  { "nom": "Vanessa Paradis", "milieu": "Musique", "cancel": "non", "categorie": "", "raison": "Chanteuse et actrice appréciée, sans polémique notable." },
-  { "nom": "Léon Marchand", "milieu": "Sport", "cancel": "non", "categorie": "", "raison": "Nageur multi-champion olympique, image publique très positive." },
-  { "nom": "Catherine Deneuve", "milieu": "Cinéma", "cancel": "non", "categorie": "", "raison": "Icône du cinéma français, sans affaire judiciaire personnelle." },
-  { "nom": "Juliette Binoche", "milieu": "Cinéma", "cancel": "non", "categorie": "", "raison": "Actrice oscarisée, sans controverse notable." },
-  { "nom": "Kylian Mbappé", "milieu": "Sport", "cancel": "non", "categorie": "", "raison": "Star du football, aucune condamnation ni mise en cause aboutie." }
+  {
+    "nom": "Harvey Weinstein",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Producteur hollywoodien condamné en 2020 à New York à 23 ans de prison pour viol et agression sexuelle, puis à nouveau condamné en 2023 à Los Angeles. Point de départ du mouvement #MeToo, près de 90 femmes l'ont accusé."
+  },
+  {
+    "nom": "Bertrand Cantat",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "delit/crime",
+    "raison": "Chanteur de Noir Désir condamné en 2004 à huit ans de prison pour le meurtre de sa compagne, l'actrice Marie Trintignant, tuée à coups répétés à Vilnius en 2003."
+  },
+  {
+    "nom": "Patrick Poivre d'Arvor",
+    "milieu": "TV/Journalisme",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Ex-présentateur du 20h de TF1, mis en examen pour viol en décembre 2023 après la plainte de l'autrice Florence Porcel. Plus de 40 femmes ont témoigné contre lui, plusieurs plaintes sont en cours d'instruction."
+  },
+  {
+    "nom": "Sean Combs (P. Diddy)",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Rappeur et producteur condamné en octobre 2025 à quatre ans de prison pour transport de personnes à des fins de prostitution, après un procès pour trafic sexuel où il a été acquitté des chefs les plus graves."
+  },
+  {
+    "nom": "R. Kelly",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "pedocriminalite",
+    "raison": "Chanteur R&B condamné en 2022 à 30 ans de prison pour racket et trafic sexuel, après des années d'accusations d'abus sur des jeunes femmes et des mineures."
+  },
+  {
+    "nom": "Jean-Jacques Goldman",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Florent Pagny",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Francis Cabrel",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Omar Sy",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Zinédine Zidane",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Sophie Marceau",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Mylène Farmer",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Thomas Pesquet",
+    "milieu": "Science",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Hugo Décrypte",
+    "milieu": "Media/Web",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Aya Nakamura",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Pierre Niney",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Jordan Bardella",
+    "milieu": "Politique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Vianney",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Soprano",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Grand Corps Malade",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Dany Boon",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Philippe Etchebest",
+    "milieu": "TV/Cuisine",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Jean Reno",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Jean Dujardin",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Michel Sardou",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Cyril Lignac",
+    "milieu": "TV/Cuisine",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Teddy Riner",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Karine Le Marchand",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Alexandra Lamy",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Renaud",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Alain Chabat",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Kylian Mbappé",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Julien Doré",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Virginie Efira",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Kad Merad",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Antoine Griezmann",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Stéphane Bern",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Alain Souchon",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Valérie Lemercier",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Gad Elmaleh",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Florence Foresti",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Audrey Fleurot",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Franck Dubosc",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Jean-Luc Reichmann",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Antoine Dupont",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Louane",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Christian Clavier",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Zazie",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Nolwenn Leroy",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Vanessa Paradis",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Françoise Hardy",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Josiane Balasko",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Evelyne Dhéliat",
+    "milieu": "TV/Météo",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Mimie Mathy",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Olivier Giroud",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Faustine Bollaert",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Marion Cotillard",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Léon Marchand",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Michel Cymes",
+    "milieu": "Media/Santé",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Nagui",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Laurent Delahousse",
+    "milieu": "TV/Journalisme",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Anne-Sophie Lapix",
+    "milieu": "TV/Journalisme",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Denis Brogniart",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Arthur",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Michel Drucker",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Elie Semoun",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Kev Adams",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Marina Foïs",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Leïla Bekhti",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Tahar Rahim",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Gilles Lellouche",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Vincent Cassel",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Guillaume Canet",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Mélanie Laurent",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Audrey Tautou",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Charlotte Gainsbourg",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Camille Cottin",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Eric Judor",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Ramzy Bedia",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Jamel Debbouze",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Fabrice Eboué",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Baptiste Lecaplain",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Blanche Gardin",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Nawell Madani",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Waly Dia",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Alex Vizorek",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Paul Mirabel",
+    "milieu": "Humour",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Patrick Bruel",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Christophe Maé",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Patrick Fiori",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Calogero",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Julien Clerc",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Michel Polnareff",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Johnny Hallyday",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Eddy Mitchell",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Sylvie Vartan",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Sheila",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "France Gall",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Jean-Paul Belmondo",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Fabrice Luchini",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Daniel Auteuil",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Gérard Jugnot",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Thierry Lhermitte",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Isabelle Adjani",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Catherine Deneuve",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Juliette Binoche",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Leïla Slimani",
+    "milieu": "Littérature",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Amélie Nothomb",
+    "milieu": "Littérature",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Marc Levy",
+    "milieu": "Littérature",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Guillaume Musso",
+    "milieu": "Littérature",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Anna Gavalda",
+    "milieu": "Littérature",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Erik Orsenna",
+    "milieu": "Littérature",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Boris Cyrulnik",
+    "milieu": "Science",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Hubert Reeves",
+    "milieu": "Science",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Edouard Philippe",
+    "milieu": "Politique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Gabriel Attal",
+    "milieu": "Politique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "François Bayrou",
+    "milieu": "Politique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Anne Hidalgo",
+    "milieu": "Politique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Rachida Dati",
+    "milieu": "Politique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Bruno Le Maire",
+    "milieu": "Politique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Didier Deschamps",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Laurent Blanc",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Thierry Henry",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Marie-José Pérec",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "David Douillet",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Tony Parker",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Renaud Lavillenie",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Martin Fourcade",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Perrine Laffont",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Clarisse Agbegnenou",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Estelle Mossely",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Mélina Robert-Michon",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Caroline Garcia",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Alizé Cornet",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Amélie Mauresmo",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Yannick Noah",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Fabien Barthez",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Bixente Lizarazu",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Marcel Desailly",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Christophe Dugarry",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Raymond Kopa",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Michel Platini",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Just Fontaine",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Paul Pogba",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "N'Golo Kanté",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Hugo Lloris",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Raphaël Varane",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Marion Bartoli",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Laure Manaudou",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Camille Lacourt",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Florent Manaudou",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Grégory Gaultier",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Christophe Lemaitre",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Nikos Aliagas",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Cyril Hanouna",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Julien Courbet",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Sophie Davant",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Laurence Boccolini",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Christophe Beaugrand",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Camille Combal",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Alessandra Sublet",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Elise Lucet",
+    "milieu": "TV/Journalisme",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "David Pujadas",
+    "milieu": "TV/Journalisme",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Claire Chazal",
+    "milieu": "TV/Journalisme",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Harry Roselmack",
+    "milieu": "TV/Journalisme",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Charles Leclerc",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Pierre Gasly",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Esteban Ocon",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Alain Prost",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Sébastien Loeb",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Ophélie Meunier",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Sandrine Quétier",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Louis Bertignac",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Bernard Lavilliers",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Bénabar",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Vincent Delerm",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Jean-Louis Aubert",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Patricia Kaas",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Hélène Ségara",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Garou",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Christophe Willem",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "M Pokora",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Slimane",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Amel Bent",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Zaz",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Indila",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Angèle",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Stromae",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Damso",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Gims",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Dadju",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Jul",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Ninho",
+    "milieu": "Musique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Squeezie",
+    "milieu": "Media/Web",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Cyprien",
+    "milieu": "Media/Web",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Norman Thavaud",
+    "milieu": "Media/Web",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "McFly et Carlito",
+    "milieu": "Media/Web",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Michou",
+    "milieu": "Media/Web",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Inoxtag",
+    "milieu": "Media/Web",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Amixem",
+    "milieu": "Media/Web",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Léna Situations",
+    "milieu": "Media/Web",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Natoo",
+    "milieu": "Media/Web",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  }
 ]

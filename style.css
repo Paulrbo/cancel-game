@@ -269,9 +269,31 @@ button {
   margin: 0 0 12px;
 }
 
+.category-badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin: 10px 0 18px;
+}
+
+.category-badge.hidden { display: none; }
+
+.category-badge.cat-VSS { background: var(--red); color: var(--paper); }
+.category-badge.cat-pedocriminalite { background: #8B1E3F; color: var(--paper); }
+.category-badge.cat-racisme { background: var(--yellow); color: var(--ink); }
+.category-badge.cat-delit-crime { background: var(--muted); color: var(--paper); }
+
 .reveal-explication {
-  color: var(--paper-dim);
-  font-size: 14px;
-  line-height: 1.5;
+  position: relative;
+  text-align: left;
+  color: var(--paper);
+  font-size: 15px;
+  line-height: 1.6;
   margin: 0;
+  padding: 4px 0 4px 18px;
+  border-left: 3px solid var(--paper-dim);
+  font-style: italic;
 }

@@ -313,6 +313,13 @@ async function triggerReveal(data) {
 }
 
 // ====== ECRAN REVELATION ======
+const CATEGORY_LABELS = {
+  'VSS': 'VSS — Violences sexistes et sexuelles',
+  'pedocriminalite': 'Pédocriminalité',
+  'racisme': 'Racisme',
+  'delit/crime': 'Délit / crime'
+};
+
 function showRevealUI(data) {
   renderedRoundIndex = data.currentRoundIndex;
   const nom = data.roundOrder[data.currentRoundIndex];
@@ -321,6 +328,18 @@ function showRevealUI(data) {
   document.getElementById('reveal-verdict').textContent = item.cancel === 'oui' ? '❌ CANCEL CONFIRMÉ' : '✅ PAS CANCEL';
   document.getElementById('reveal-name').textContent = item.nom;
   document.getElementById('reveal-explication').textContent = item.raison;
+
+  const badge = document.getElementById('category-badge');
+  badge.className = 'category-badge'; // reset
+  const cats = item.categorie ? item.categorie.split(',').map(c => c.trim()) : [];
+  if (cats.length > 0 && item.cancel === 'oui') {
+    const labels = cats.map(c => CATEGORY_LABELS[c] || c).join(' + ');
+    badge.textContent = labels;
+    const cssClass = cats.length === 1 ? 'cat-' + cats[0].replace('/', '-') : '';
+    badge.classList.add(cssClass || 'cat-delit-crime');
+  } else {
+    badge.classList.add('hidden');
+  }
 
   const ul = document.getElementById('round-scores');
   ul.innerHTML = '';
