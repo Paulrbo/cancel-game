@@ -1489,5 +1489,411 @@
     "cancel": "non",
     "categorie": "",
     "raison": "Figure appréciée du public, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Koba LaD",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "delit/crime",
+    "raison": "Condamné à 15 mois de prison pour violences sur son ex-manager, puis condamné en 2025 à six ans de prison ferme pour un accident de la route mortel provoqué alors qu'il était sous l'emprise du cannabis."
+  },
+  {
+    "nom": "Ary Abittan",
+    "milieu": "Humour",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé de viol en 2021 par une femme qu'il fréquentait. Après deux ans d'instruction, un non-lieu a été rendu en 2023 puis confirmé en appel en 2024, faute d'éléments suffisants."
+  },
+  {
+    "nom": "Gérald Darmanin",
+    "milieu": "Politique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé de viol par Sophie Patterson-Spatz pour des faits de 2009. Jamais mis en examen, il a bénéficié d'un non-lieu en 2022, confirmé en appel puis définitivement par la Cour de cassation en 2024."
+  },
+  {
+    "nom": "Lomepal",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Visé par plusieurs plaintes pour viol déposées entre 2020 et 2024 par différentes femmes. Les premières plaintes ont été classées, mais une nouvelle procédure a été relancée par certaines plaignantes en 2025."
+  },
+  {
+    "nom": "Roméo Elvis",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "A publiquement reconnu et présenté ses excuses après avoir été accusé d'agression sexuelle par une jeune femme en 2020."
+  },
+  {
+    "nom": "Moha La Squale",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Condamné en 2024 à quatre ans de prison pour violences conjugales, séquestration et menaces de mort sur plusieurs ex-compagnes."
+  },
+  {
+    "nom": "Adrien Quatennens",
+    "milieu": "Politique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Condamné en 2022 à quatre mois de prison avec sursis pour violences conjugales sur son épouse et envoi de messages malveillants."
+  },
+  {
+    "nom": "Nicolas Bedos",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Condamné en 2024 à un an de prison, dont six mois avec sursis, pour agressions sexuelles sur deux femmes commises en 2023."
+  },
+  {
+    "nom": "Pierre Palmade",
+    "milieu": "Humour",
+    "cancel": "oui",
+    "categorie": "delit/crime",
+    "raison": "Condamné en 2024 à cinq ans de prison dont deux ferme pour homicide et blessures involontaires, après un accident de voiture sous l'emprise de stupéfiants ayant causé la mort d'un fœtus et blessé gravement une famille."
+  },
+  {
+    "nom": "Patrick Poivre d'Arvor",
+    "milieu": "TV/Journalisme",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Mis en examen pour viol en 2023 après la plainte de l'autrice Florence Porcel. Plus de 40 femmes ont témoigné contre lui et plusieurs informations judiciaires sont en cours."
+  },
+  {
+    "nom": "Éric Zemmour",
+    "milieu": "Politique",
+    "cancel": "oui",
+    "categorie": "racisme",
+    "raison": "Condamné à plusieurs reprises pour provocation à la haine raciale et injures racistes, notamment pour avoir qualifié des mineurs étrangers de « voleurs, violeurs, assassins »."
+  },
+  {
+    "nom": "Jean-Marc Morandini",
+    "milieu": "TV/Animation",
+    "cancel": "oui",
+    "categorie": "pedocriminalite",
+    "raison": "Définitivement condamné en 2026 pour corruption de mineurs, pour avoir envoyé des messages à caractère sexuel à trois adolescents entre 2009 et 2016."
+  },
+  {
+    "nom": "Luc Besson",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé de viol par l'actrice Sand Van Roy en 2018, et de comportements inappropriés par huit autres femmes. Non-lieu rendu puis définitivement confirmé par la Cour de cassation en 2023."
+  },
+  {
+    "nom": "Alain Soral",
+    "milieu": "Media/Web",
+    "cancel": "oui",
+    "categorie": "racisme",
+    "raison": "Condamné à de nombreuses reprises pour antisémitisme, négationnisme et provocation à la haine raciale, ainsi que pour apologie du terrorisme en 2026."
+  },
+  {
+    "nom": "François Fillon",
+    "milieu": "Politique",
+    "cancel": "oui",
+    "categorie": "delit/crime",
+    "raison": "Définitivement condamné pour détournement de fonds publics dans l'affaire des emplois fictifs de son épouse Penelope, à quatre ans de prison avec sursis."
+  },
+  {
+    "nom": "L'abbé Pierre",
+    "milieu": "Autre",
+    "cancel": "oui",
+    "categorie": "VSS,pedocriminalite",
+    "raison": "Des rapports publiés entre 2024 et 2025 ont révélé 68 victimes d'agressions sexuelles, dont 12 mineures, commises entre les années 1950 et 2000."
+  },
+  {
+    "nom": "Jean-Luc Lahaye",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "pedocriminalite",
+    "raison": "Condamné pour corruption de mineure après avoir demandé à une adolescente de 14 ans de se livrer à des jeux sexuels par webcam. Une nouvelle mise en examen pour viols sur mineures a suivi en 2022."
+  },
+  {
+    "nom": "Kurt Zouma",
+    "milieu": "Sport",
+    "cancel": "oui",
+    "categorie": "delit/crime",
+    "raison": "Condamné par la justice britannique en 2022 à des travaux d'intérêt général pour avoir violemment frappé et giflé son chat, après la diffusion d'une vidéo devenue virale."
+  },
+  {
+    "nom": "Nicolas Hulot",
+    "milieu": "TV/Animation",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé de viols et d'agressions sexuelles par six femmes dans une enquête d'Envoyé Spécial en 2021. Une enquête préliminaire a été ouverte ; les faits les plus anciens sont prescrits."
+  },
+  {
+    "nom": "Marilyn Manson",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé par plusieurs femmes, dont son ex-fiancée Evan Rachel Wood, de violences physiques et sexuelles. Des poursuites civiles ont été engagées ; aucune condamnation pénale à ce jour."
+  },
+  {
+    "nom": "Andrew Tate",
+    "milieu": "Media/Web",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Inculpé en Roumanie pour trafic d'êtres humains, viol et constitution d'un groupe criminel organisé. La procédure judiciaire est toujours en cours."
+  },
+  {
+    "nom": "Kanye West",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "racisme",
+    "raison": "Auteur de nombreuses déclarations et publications antisémites répétées, ayant entraîné la rupture de plusieurs contrats commerciaux majeurs."
+  },
+  {
+    "nom": "DSK (Dominique Strauss-Kahn)",
+    "milieu": "Politique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé de viol par une femme de chambre à New York en 2011, charges finalement abandonnées. Poursuivi ensuite dans l'affaire du Carlton de Lille pour proxénétisme aggravé, il a été acquitté en 2015."
+  },
+  {
+    "nom": "Brigitte Bardot",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "racisme",
+    "raison": "Condamnée à plusieurs reprises par la justice française pour incitation à la haine raciale, à propos de ses propos sur l'islam et l'immigration."
+  },
+  {
+    "nom": "Pierre Menès",
+    "milieu": "TV/Animation",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé par plusieurs femmes de harcèlement et d'agressions sexuelles dans le milieu de Canal+. Écarté de la chaîne en 2021 après une enquête interne."
+  },
+  {
+    "nom": "Jacques Chirac",
+    "milieu": "Politique",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Ancien président, figure consensuelle, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Maxime Biaggi",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Sans controverse majeure recensée."
+  },
+  {
+    "nom": "Philippe Lacheau",
+    "milieu": "Cinéma",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Réalisateur et acteur populaire, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Benjamin Mendy",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Footballeur accusé de viols en Angleterre, acquitté de l'ensemble des charges à l'issue de son procès."
+  },
+  {
+    "nom": "Ethan Mbappé",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Jeune footballeur, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Hatem Ben Arfa",
+    "milieu": "Sport",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Footballeur, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Seb la Frite",
+    "milieu": "Media/Web",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Créateur de contenu, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Thierry Ardisson",
+    "milieu": "TV/Animation",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Animateur télé de longue date, sans controverse judiciaire majeure recensée."
+  },
+  {
+    "nom": "Léa Salamé",
+    "milieu": "TV/Journalisme",
+    "cancel": "non",
+    "categorie": "",
+    "raison": "Journaliste appréciée, sans controverse majeure recensée."
+  },
+  {
+    "nom": "Dieudonné",
+    "milieu": "Humour",
+    "cancel": "oui",
+    "categorie": "racisme",
+    "raison": "Condamné plus d'une douzaine de fois par les justices française, belge, suisse et canadienne pour provocation à la haine raciale, injures antisémites et négationnisme."
+  },
+  {
+    "nom": "Greg Guillotin",
+    "milieu": "Media/Web",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "A publiquement reconnu, en septembre 2026, avoir été violent physiquement et psychologiquement envers son ex-compagne pendant sept ans, après le dépôt d'une plainte à son encontre."
+  },
+  {
+    "nom": "Jack Lang",
+    "milieu": "Politique",
+    "cancel": "oui",
+    "categorie": "pedocriminalite",
+    "raison": "A signé en 1977 une tribune défendant la dépénalisation des relations sexuelles entre adultes et mineurs, et a tenu des propos ambigus sur le sujet à la télévision en 1982. A qualifié cette signature de « connerie » en 2021."
+  },
+  {
+    "nom": "TheKairi78",
+    "milieu": "Media/Web",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Banni de Twitch en 2023 après avoir été visé par une enquête pour viol. Avait déjà fait polémique en 2020 pour une relation avec une adolescente de 16 ans alors qu'il en avait 33."
+  },
+  {
+    "nom": "Experimentboy",
+    "milieu": "Media/Web",
+    "cancel": "oui",
+    "categorie": "pedocriminalite",
+    "raison": "Condamné en 2024 à deux ans de prison avec sursis pour corruption de mineurs, après que plusieurs jeunes garçons ont témoigné avoir reçu des messages à caractère sexuel de sa part alors qu'ils étaient adolescents."
+  },
+  {
+    "nom": "Norman fait des vidéos",
+    "milieu": "Media/Web",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Visé à partir de 2018 par plusieurs témoignages de harcèlement sexuel, puis par une enquête pour viols et corruption de mineur ouverte en 2022. L'enquête a été classée sans suite en 2023, le parquet écartant la qualification de viol."
+  },
+  {
+    "nom": "Guillaume Pley",
+    "milieu": "Media/Web",
+    "cancel": "oui",
+    "categorie": "pedocriminalite",
+    "raison": "Accusé en août 2026 d'avoir envoyé des messages à caractère sexuel à des mineures. Il reconnaît un caractère « inapproprié » pour certains échanges tout en portant plainte en diffamation contre les médias ayant relayé l'affaire."
+  },
+  {
+    "nom": "Wissam Ben Yedder",
+    "milieu": "Sport",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Condamné en 2024 à deux ans de prison avec sursis pour agression sexuelle en état d'ivresse, condamné aussi pour violences psychologiques sur son ex-épouse, et renvoyé devant la cour criminelle pour viol et tentative de viol dans un autre dossier."
+  },
+  {
+    "nom": "Jean-Jacques Bourdin",
+    "milieu": "TV/Journalisme",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Licencié par BFMTV et RMC en 2022 après deux plaintes pour agression sexuelle, l'une pour des faits de 2013 dénoncés par la journaliste Fanny Agostini, l'autre pour des faits remontant aux années 1980. Les enquêtes ont été classées pour prescription."
+  },
+  {
+    "nom": "Cauet",
+    "milieu": "TV/Animation",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Mis en cause par cinq femmes ayant déposé plainte contre lui, révélé par une enquête du Parisien."
+  },
+  {
+    "nom": "Claude François",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Réputation trouble de longue date concernant son comportement envers les jeunes femmes de son entourage, alimentée par une interview de 1973 aux propos controversés et par plusieurs témoignages de danseuses sur son caractère violent. Aucune plainte ni condamnation, le chanteur étant décédé en 1978."
+  },
+  {
+    "nom": "47 Ter",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "pedocriminalite",
+    "raison": "Dans un freestyle de l'émission Rentre dans le Cercle, l'un des membres du groupe rappe des paroles sexualisant explicitement des lycéennes de quinze ans, des propos largement relayés et critiqués."
+  },
+  {
+    "nom": "Alain Finkielkraut",
+    "milieu": "Media/Web",
+    "cancel": "oui",
+    "categorie": "racisme",
+    "raison": "A déclaré en 2005 au journal israélien Haaretz que l'équipe de France de football était devenue « black-black-black », provoquant un tollé. Une plainte pour incitation à la haine raciale a été déposée puis rejetée par la justice."
+  },
+  {
+    "nom": "Pascal Praud",
+    "milieu": "TV/Journalisme",
+    "cancel": "oui",
+    "categorie": "racisme",
+    "raison": "Visé à plusieurs reprises par des plaintes pour propos jugés racistes sur CNews, notamment en 2023 en suggérant un lien entre l'immigration et une invasion de punaises de lit, puis en 2026 en commentant la couleur de peau de manifestants face aux forces de l'ordre."
+  },
+  {
+    "nom": "Jean Messiha",
+    "milieu": "Politique",
+    "cancel": "oui",
+    "categorie": "racisme",
+    "raison": "Polémiste d'extrême droite visé par plusieurs plaintes pour des propos islamophobes et racistes, notamment en juillet 2026 après une publication moquant des femmes en burkini photographiées sans leur consentement."
+  },
+  {
+    "nom": "Patrick Bruel",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Mis en examen en juin 2026 pour viols, tentatives de viol, agressions sexuelles et harcèlement sexuel, après une enquête de Mediapart dans laquelle une trentaine de femmes l'accusent de violences sexuelles entre 1992 et 2019, dont la journaliste Flavie Flament et la directrice d'Unifrance Daniela Elstner. Il conteste l'ensemble des faits et a annulé sa tournée."
+  },
+  {
+    "nom": "Cyril Hanouna",
+    "milieu": "TV/Animation",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "En 2016 dans TPMP, il a orchestré et encouragé un sketch où une candidate, Soraya Rifi, a été poussée à embrasser un chroniqueur malgré ses refus répétés, un moment largement dénoncé comme une agression sexuelle mise en scène, ayant donné lieu à une pétition et une saisine du CSA."
+  },
+  {
+    "nom": "Booba",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "delit/crime,racisme",
+    "raison": "Mis en examen à plusieurs reprises pour harcèlement moral aggravé, notamment après des plaintes de l'agente Magali Berdah puis du couple formé par le rappeur Gims et sa compagne. Également jugé pour injures racistes et cyberharcèlement envers une journaliste et un essayiste."
+  },
+  {
+    "nom": "Sardoche",
+    "milieu": "Media/Web",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Une relation avec une adolescente de 16 ans et 10 mois alors qu'il avait 24-25 ans, légale en France mais très controversée, a été révélée en 2022 via des messages où il la qualifiait de « proie trop simple », lui valant d'être publiquement accusé de prédateur sexuel."
+  },
+  {
+    "nom": "Gérard Darmon",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé de violences sexistes et sexuelles par neuf femmes dans une enquête publiée en 2024 (Politis, Le Parisien). Aucune condamnation judiciaire n'a été établie à ce jour."
+  },
+  {
+    "nom": "Franck Gastambide",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé par six femmes en 2025 de violences sexuelles, physiques et psychologiques dans une enquête de Mediapart. Il conteste les faits ; aucune plainte n'avait été déposée au moment de la publication."
+  },
+  {
+    "nom": "Edouard Baer",
+    "milieu": "Cinéma",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Accusé par six femmes de harcèlement et d'agressions sexuelles dans une enquête Mediapart/Cheek publiée en mai 2024. Il a présenté ses excuses ; aucune condamnation n'a été établie."
+  },
+  {
+    "nom": "Naps",
+    "milieu": "Musique",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Condamné le 19 février 2026 à sept ans de réclusion criminelle pour le viol d'une jeune femme endormie dans une chambre d'hôtel parisienne en 2021. Il a fait appel et a été remis en liberté sous contrôle judiciaire dans l'attente du nouveau procès."
+  },
+  {
+    "nom": "Patrick Sébastien",
+    "milieu": "TV/Animation",
+    "cancel": "oui",
+    "categorie": "racisme",
+    "raison": "Condamné en mars 1996 par le tribunal correctionnel de Paris à une amende pour incitation à la haine raciale, après la diffusion sur TF1 d'un sketch intitulé « Casser du Noir », parodiant Jean-Marie Le Pen."
   }
 ]

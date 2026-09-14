@@ -335,8 +335,8 @@ function showRevealUI(data) {
   if (cats.length > 0 && item.cancel === 'oui') {
     const labels = cats.map(c => CATEGORY_LABELS[c] || c).join(' + ');
     badge.textContent = labels;
-    const cssClass = cats.length === 1 ? 'cat-' + cats[0].replace('/', '-') : '';
-    badge.classList.add(cssClass || 'cat-delit-crime');
+    const cssClass = 'cat-' + cats[0].replace('/', '-');
+    badge.classList.add(cssClass);
   } else {
     badge.classList.add('hidden');
   }
