@@ -166,6 +166,45 @@ document.getElementById('btn-start-game').addEventListener('click', async () => 
   });
 });
 
+// ====== PHOTOS (via API Wikipedia, à la volée) ======
+const photoCache = {}; // nom -> url ou null (pas trouvée)
+
+async function fetchWikipediaPhoto(nom) {
+  if (nom in photoCache) return photoCache[nom];
+
+  // Nettoie les noms avec parenthèses, ex: "DSK (Dominique Strauss-Kahn)" -> "Dominique Strauss-Kahn"
+  const cleanName = nom.includes('(') ? nom.match(/\(([^)]+)\)/)?.[1] || nom.split('(')[0].trim() : nom;
+
+  const tryFetch = async (name, lang) => {
+    try {
+      const url = `https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(name.replace(/ /g, '_'))}`;
+      const res = await fetch(url);
+      if (!res.ok) return null;
+      const data = await res.json();
+      return data.thumbnail?.source || null;
+    } catch {
+      return null;
+    }
+  };
+
+  let photoUrl = await tryFetch(cleanName, 'fr');
+  if (!photoUrl) photoUrl = await tryFetch(cleanName, 'en');
+  if (!photoUrl && cleanName !== nom) photoUrl = await tryFetch(nom, 'fr');
+
+  photoCache[nom] = photoUrl;
+  return photoUrl;
+}
+
+function setPhoto(imgEl, url) {
+  if (url) {
+    imgEl.src = url;
+    imgEl.classList.remove('hidden');
+  } else {
+    imgEl.classList.add('hidden');
+    imgEl.src = '';
+  }
+}
+
 // ====== ECRAN ROUND ======
 function startRoundUI(data) {
   if (poolData.length === 0) { loadPool().then(() => startRoundUI(data)); return; }
@@ -177,6 +216,10 @@ function startRoundUI(data) {
   document.getElementById('round-counter').textContent = `Round ${data.currentRoundIndex + 1} / ${data.roundOrder.length}`;
   document.getElementById('personality-name').textContent = item.nom;
   document.getElementById('personality-milieu').textContent = item.milieu;
+
+  const photoImg = document.getElementById('personality-photo');
+  photoImg.classList.add('hidden');
+  fetchWikipediaPhoto(item.nom).then(url => setPhoto(photoImg, url));
 
   document.getElementById('bonus-block').classList.add('hidden');
   document.getElementById('waiting-others').classList.add('hidden');
@@ -328,6 +371,10 @@ function showRevealUI(data) {
   document.getElementById('reveal-verdict').textContent = item.cancel === 'oui' ? '❌ CANCEL CONFIRMÉ' : '✅ PAS CANCEL';
   document.getElementById('reveal-name').textContent = item.nom;
   document.getElementById('reveal-explication').textContent = item.raison;
+
+  const revealPhotoImg = document.getElementById('reveal-photo');
+  revealPhotoImg.classList.add('hidden');
+  fetchWikipediaPhoto(item.nom).then(url => setPhoto(revealPhotoImg, url));
 
   const badge = document.getElementById('category-badge');
   badge.className = 'category-badge'; // reset
