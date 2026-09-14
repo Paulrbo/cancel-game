@@ -1,8 +1,8 @@
 // ====== CONSTANTES DE JEU ======
 const ROUND_DURATION_MS = 15000; // 15s pour repondre
-const ROUNDS_PER_GAME = 10;
 const SCORE_MAX = 1000;
 const SCORE_MIN = 100;
+let selectedRoundCount = 10;
 
 // ====== ETAT LOCAL ======
 let myPseudo = null;
@@ -113,6 +113,7 @@ function onRoomUpdate(snapshot) {
     case 'lobby':
       showScreen('screen-waiting');
       document.getElementById('btn-start-game').style.display = isHost ? 'block' : 'none';
+      document.getElementById('round-count-selector').style.display = isHost ? 'block' : 'none';
       document.getElementById('waiting-hint').style.display = isHost ? 'none' : 'block';
       break;
     case 'playing':
@@ -147,14 +148,23 @@ function renderPlayersList(players) {
 }
 
 // ====== LANCEMENT DE LA PARTIE (HOTE) ======
+document.querySelectorAll('.round-count-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.round-count-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedRoundCount = parseInt(btn.dataset.rounds, 10);
+  });
+});
+
 document.getElementById('btn-start-game').addEventListener('click', async () => {
   await loadPool();
   const ouiItems = shuffle(poolData.filter(p => p.cancel === 'oui'));
   const nonItems = shuffle(poolData.filter(p => p.cancel === 'non'));
 
-  const guaranteedOui = ouiItems.slice(0, Math.min(4, ouiItems.length));
+  const guaranteedCount = Math.min(Math.max(3, Math.round(selectedRoundCount * 0.35)), ouiItems.length);
+  const guaranteedOui = ouiItems.slice(0, guaranteedCount);
   const rest = shuffle([...ouiItems.slice(guaranteedOui.length), ...nonItems])
-    .slice(0, ROUNDS_PER_GAME - guaranteedOui.length);
+    .slice(0, selectedRoundCount - guaranteedOui.length);
   const roundOrder = shuffle([...guaranteedOui, ...rest]).map(p => p.nom);
 
   await db.ref('rooms/' + roomId).update({

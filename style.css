@@ -5,11 +5,11 @@
   --red: #e63b2e;
   --yellow: #f5c518;
   --muted: #8a8377;
-  --cat-vss: #1c3f66;
-  --cat-pedo: #6b6320;
-  --cat-crime: #1f5c33;
-  --cat-racisme: #7a1f24;
-  --clean-green: #3fae4a;
+  --cat-vss: #4a3f52;
+  --cat-pedo: #5c4a2e;
+  --cat-crime: #33453f;
+  --cat-racisme: #5c3232;
+  --clean-green: #3a6b4a;
   --font-display: 'Anton', sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
 }
@@ -146,6 +146,34 @@ button {
 }
 
 .hint { text-align: center; color: var(--muted); font-size: 13px; margin: 8px 0 0; flex: 0 0 auto; }
+
+.round-count-selector { margin-bottom: 16px; }
+
+.hint-label {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.round-count-options {
+  display: flex;
+  gap: 8px;
+}
+
+.round-count-btn {
+  flex: 1;
+  background: transparent;
+  color: var(--paper-dim);
+  border: 2px solid var(--paper-dim);
+  padding: 12px 8px;
+  font-size: 15px;
+}
+
+.round-count-btn.active {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
 
 /* ===== ECRANS DE JEU (round / reveal) : plein ecran, sans scroll ===== */
 

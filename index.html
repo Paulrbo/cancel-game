@@ -52,6 +52,16 @@
     <p class="room-label">Salon : <strong id="waiting-room-name"></strong></p>
     <h2>Joueurs présents</h2>
     <ul id="players-list"></ul>
+
+    <div class="round-count-selector" id="round-count-selector">
+      <p class="hint-label">Nombre de questions</p>
+      <div class="round-count-options">
+        <button class="round-count-btn active" data-rounds="10">10</button>
+        <button class="round-count-btn" data-rounds="15">15</button>
+        <button class="round-count-btn" data-rounds="20">20</button>
+      </div>
+    </div>
+
     <button id="btn-start-game" class="btn-primary">Lancer la partie</button>
     <p class="hint" id="waiting-hint">En attente que l'hôte lance la partie…</p>
   </section>
