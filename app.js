@@ -1,9 +1,8 @@
 // ====== CONSTANTES DE JEU ======
-const ROUND_DURATION_MS = 15000; // 15s pour voter
+const ROUND_DURATION_MS = 15000; // 15s pour repondre
 const ROUNDS_PER_GAME = 10;
-const BASE_MAX = 500;
-const BASE_MIN = 100;
-const BONUS_MAX = 1000;
+const SCORE_MAX = 1000;
+const SCORE_MIN = 100;
 
 // ====== ETAT LOCAL ======
 let myPseudo = null;
@@ -23,6 +22,7 @@ let revealTriggeredForRound = -1;
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
+  document.body.classList.toggle('in-game', id === 'screen-round' || id === 'screen-reveal');
 }
 
 function shuffle(arr) {
@@ -221,17 +221,16 @@ function startRoundUI(data) {
   photoImg.classList.add('hidden');
   fetchWikipediaPhoto(item.nom).then(url => setPhoto(photoImg, url));
 
-  document.getElementById('bonus-block').classList.add('hidden');
   document.getElementById('waiting-others').classList.add('hidden');
-  document.querySelectorAll('#bonus-block input[type=checkbox]').forEach(cb => cb.checked = false);
-  document.querySelectorAll('.stamp').forEach(b => b.disabled = false);
+  document.getElementById('answer-grid').classList.remove('hidden');
+  document.querySelectorAll('.answer-pill, .answer-clean').forEach(b => b.disabled = false);
 
   hasVotedThisRound = false;
   localRoundStart = Date.now();
   revealTriggeredForRound = -1;
 
   runTimer(data);
-  attachVoteHandlers(data);
+  attachAnswerHandlers(data);
 
   if (isHost) {
     clearTimeout(hostRoundTimeout);
@@ -255,44 +254,30 @@ function runTimer(data) {
   }, 150);
 }
 
-function attachVoteHandlers(data) {
-  document.querySelectorAll('.stamp').forEach(btn => {
-    btn.onclick = () => {
-      const vote = btn.dataset.vote;
-      if (vote === 'oui') {
-        document.querySelectorAll('.stamp').forEach(b => b.disabled = true);
-        document.getElementById('bonus-block').classList.remove('hidden');
-      } else {
-        submitVote('non', []);
-      }
-    };
+function attachAnswerHandlers(data) {
+  document.querySelectorAll('.answer-pill, .answer-clean').forEach(btn => {
+    btn.onclick = () => submitAnswer(btn.dataset.answer);
   });
-  document.getElementById('btn-valider-bonus').onclick = () => {
-    const checked = [...document.querySelectorAll('#bonus-block input[type=checkbox]:checked')].map(cb => cb.value);
-    submitVote('oui', checked);
-  };
 }
 
-function submitVote(vote, categories) {
+function submitAnswer(answer) {
   if (hasVotedThisRound) return;
   hasVotedThisRound = true;
-  document.querySelectorAll('.stamp').forEach(b => b.disabled = true);
-  document.getElementById('bonus-block').classList.add('hidden');
+  document.getElementById('answer-grid').classList.add('hidden');
   document.getElementById('waiting-others').classList.remove('hidden');
 
   const timeTaken = Date.now() - localRoundStart;
   db.ref(`rooms/${roomId}/votes/${currentRoomData.currentRoundIndex}/${myPseudo}`).set({
-    vote, categories, timeTaken
+    answer, timeTaken
   });
 }
 
 function autoSubmitNoAnswer() {
   hasVotedThisRound = true;
-  document.querySelectorAll('.stamp').forEach(b => b.disabled = true);
-  document.getElementById('bonus-block').classList.add('hidden');
+  document.getElementById('answer-grid').classList.add('hidden');
   document.getElementById('waiting-others').classList.remove('hidden');
   db.ref(`rooms/${roomId}/votes/${currentRoomData.currentRoundIndex}/${myPseudo}`).set({
-    vote: null, categories: [], timeTaken: ROUND_DURATION_MS
+    answer: null, timeTaken: ROUND_DURATION_MS
   });
 }
 
@@ -326,21 +311,14 @@ async function triggerReveal(data) {
   const roundScores = {};
   for (const pseudo of Object.keys(players)) {
     const v = votes[pseudo];
-    if (!v || v.vote === null) { roundScores[pseudo] = 0; continue; }
+    if (!v || !v.answer) { roundScores[pseudo] = 0; continue; }
+
+    const correct = item.cancel === 'oui' ? trueCats.includes(v.answer) : v.answer === 'clean';
 
     let score = 0;
-    const baseCorrect = v.vote === item.cancel;
-    if (baseCorrect) {
+    if (correct) {
       const frac = 1 - Math.min(1, v.timeTaken / ROUND_DURATION_MS);
-      score += Math.round(BASE_MIN + (BASE_MAX - BASE_MIN) * frac);
-    }
-    if (v.vote === 'oui') {
-      const unit = trueCats.length > 0 ? BONUS_MAX / trueCats.length : 250;
-      let bonus = 0;
-      (v.categories || []).forEach(c => {
-        bonus += trueCats.includes(c) ? unit : -unit;
-      });
-      score += Math.max(0, Math.round(bonus));
+      score = Math.round(SCORE_MIN + (SCORE_MAX - SCORE_MIN) * frac);
     }
     roundScores[pseudo] = score;
   }

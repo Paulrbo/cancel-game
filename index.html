@@ -2,7 +2,10 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#14100f">
 <title>CANCEL ? — Le jeu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -10,7 +13,7 @@
 </head>
 <body>
 
-<div class="masthead">
+<div class="masthead" id="masthead">
   <h1>CANCEL <span>?</span></h1>
   <p class="kicker">le jeu qui teste ta culture des scandales</p>
 </div>
@@ -18,7 +21,7 @@
 <main id="app">
 
   <!-- ECRAN 1 : PSEUDO -->
-  <section id="screen-pseudo" class="screen active">
+  <section id="screen-pseudo" class="screen active screen-form">
     <label for="pseudo-input">Ton pseudo</label>
     <input id="pseudo-input" type="text" maxlength="16" placeholder="ex: JournalisteDuDimanche" autocomplete="off">
     <button id="btn-pseudo-valider" class="btn-primary">Continuer</button>
@@ -26,7 +29,7 @@
   </section>
 
   <!-- ECRAN 2 : CREER / REJOINDRE -->
-  <section id="screen-lobby-choice" class="screen">
+  <section id="screen-lobby-choice" class="screen screen-form">
     <p class="hello">Salut <span id="hello-pseudo"></span> 👋</p>
 
     <div class="card">
@@ -45,7 +48,7 @@
   </section>
 
   <!-- ECRAN 3 : SALLE D'ATTENTE -->
-  <section id="screen-waiting" class="screen">
+  <section id="screen-waiting" class="screen screen-form">
     <p class="room-label">Salon : <strong id="waiting-room-name"></strong></p>
     <h2>Joueurs présents</h2>
     <ul id="players-list"></ul>
@@ -55,51 +58,58 @@
 
   <!-- ECRAN 4 : ROUND EN COURS -->
   <section id="screen-round" class="screen">
-    <div class="timer-bar-wrap"><div class="timer-bar" id="timer-bar"></div></div>
-    <p class="round-counter" id="round-counter">Round 1 / 10</p>
+    <div class="stage">
+      <div class="timer-bar-wrap"><div class="timer-bar" id="timer-bar"></div></div>
 
-    <div class="personality-card">
-      <img id="personality-photo" class="personality-photo hidden" alt="">
-      <h2 id="personality-name">—</h2>
-      <p class="personality-milieu" id="personality-milieu">—</p>
-    </div>
-
-    <div id="vote-buttons" class="vote-buttons">
-      <button class="stamp stamp-cancel" data-vote="oui">CANCEL</button>
-      <button class="stamp stamp-safe" data-vote="non">PAS CANCEL</button>
-    </div>
-
-    <div id="bonus-block" class="bonus-block hidden">
-      <p>Coche la ou les raisons (si tu en vois plusieurs) :</p>
-      <div class="bonus-options">
-        <label><input type="checkbox" value="VSS"> VSS</label>
-        <label><input type="checkbox" value="pedocriminalite"> Pédocriminalité</label>
-        <label><input type="checkbox" value="racisme"> Racisme</label>
-        <label><input type="checkbox" value="delit/crime"> Délit / crime</label>
+      <div class="photo-stage">
+        <span class="stage-badge" id="round-counter">1 / 10</span>
+        <img id="personality-photo" class="photo-img hidden" alt="">
+        <div class="photo-gradient"></div>
+        <div class="photo-info">
+          <h2 id="personality-name">—</h2>
+          <p class="personality-milieu" id="personality-milieu">—</p>
+        </div>
       </div>
-      <button id="btn-valider-bonus" class="btn-primary">Valider mes réponses</button>
-    </div>
 
-    <p class="waiting-others hidden" id="waiting-others">Réponse enregistrée, en attente des autres joueurs…</p>
+      <div id="answer-grid" class="answer-grid">
+        <div class="answer-pills">
+          <button class="answer-pill cat-VSS" data-answer="VSS">VSS</button>
+          <button class="answer-pill cat-pedocriminalite" data-answer="pedocriminalite">Pédocriminalité</button>
+          <button class="answer-pill cat-delit-crime" data-answer="delit/crime">Délit / crime</button>
+          <button class="answer-pill cat-racisme" data-answer="racisme">Racisme</button>
+        </div>
+        <button class="answer-clean" data-answer="clean">CLEAN</button>
+      </div>
+
+      <p class="waiting-others hidden" id="waiting-others">Réponse enregistrée, en attente des autres joueurs…</p>
+    </div>
   </section>
 
   <!-- ECRAN 5 : REVELATION -->
   <section id="screen-reveal" class="screen">
-    <div class="reveal-card" id="reveal-card">
-      <img id="reveal-photo" class="personality-photo hidden" alt="">
-      <p class="reveal-verdict" id="reveal-verdict">—</p>
-      <h2 id="reveal-name">—</h2>
-      <span class="category-badge hidden" id="category-badge">—</span>
-      <blockquote class="reveal-explication" id="reveal-explication">—</blockquote>
+    <div class="stage">
+      <div class="photo-stage photo-stage-reveal">
+        <img id="reveal-photo" class="photo-img hidden" alt="">
+        <div class="photo-gradient"></div>
+        <div class="photo-info">
+          <span class="reveal-verdict" id="reveal-verdict">—</span>
+          <h2 id="reveal-name">—</h2>
+        </div>
+      </div>
+
+      <div class="reveal-details">
+        <span class="category-badge hidden" id="category-badge">—</span>
+        <blockquote class="reveal-explication" id="reveal-explication">—</blockquote>
+        <ul id="round-scores"></ul>
+      </div>
+
+      <button id="btn-next-round" class="btn-primary">Round suivant</button>
+      <p class="hint" id="reveal-hint">En attente de l'hôte pour continuer…</p>
     </div>
-    <h3>Scores du round</h3>
-    <ul id="round-scores"></ul>
-    <button id="btn-next-round" class="btn-primary">Round suivant</button>
-    <p class="hint" id="reveal-hint">En attente de l'hôte pour continuer…</p>
   </section>
 
   <!-- ECRAN 6 : SCORES FINAUX -->
-  <section id="screen-final" class="screen">
+  <section id="screen-final" class="screen screen-form">
     <h2>Résultats finaux</h2>
     <ul id="final-scores"></ul>
     <button id="btn-replay" class="btn-primary">Rejouer</button>
