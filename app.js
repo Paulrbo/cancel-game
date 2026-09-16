@@ -34,6 +34,22 @@ function shuffle(arr) {
   return a;
 }
 
+const AVATAR_COLORS = ['#4a3f52', '#5c4a2e', '#33453f', '#5c3232', '#3a6b4a', '#8a5a2e', '#3f4a6b', '#6b3f5a'];
+
+function getAvatarColor(pseudo) {
+  let hash = 0;
+  for (let i = 0; i < pseudo.length; i++) hash = (hash * 31 + pseudo.charCodeAt(i)) % AVATAR_COLORS.length;
+  return AVATAR_COLORS[Math.abs(hash)];
+}
+
+function getInitials(pseudo) {
+  return pseudo.trim().slice(0, 2).toUpperCase();
+}
+
+function renderAvatar(pseudo) {
+  return `<span class="avatar" style="background:${getAvatarColor(pseudo)}">${getInitials(pseudo)}</span>`;
+}
+
 async function loadPool() {
   const res = await fetch('data.json');
   poolData = await res.json();
@@ -142,7 +158,7 @@ function renderPlayersList(players) {
   ul.innerHTML = '';
   Object.keys(players || {}).forEach(p => {
     const li = document.createElement('li');
-    li.innerHTML = `<span>${p}${p === currentRoomData.host ? ' 👑' : ''}</span><span>${players[p].score || 0} pts</span>`;
+    li.innerHTML = `<span class="player-name-row">${renderAvatar(p)}${p}${p === currentRoomData.host ? ' 👑' : ''}</span><span>${players[p].score || 0} pts</span>`;
     ul.appendChild(li);
   });
 }
@@ -319,9 +335,11 @@ async function triggerReveal(data) {
   const trueCats = item.categorie ? item.categorie.split(',').map(s => s.trim()) : [];
 
   const roundScores = {};
+  const answerCounts = { 'VSS': 0, 'pedocriminalite': 0, 'delit/crime': 0, 'racisme': 0, 'clean': 0 };
   for (const pseudo of Object.keys(players)) {
     const v = votes[pseudo];
     if (!v || !v.answer) { roundScores[pseudo] = 0; continue; }
+    if (answerCounts.hasOwnProperty(v.answer)) answerCounts[v.answer]++;
 
     const correct = item.cancel === 'oui' ? trueCats.includes(v.answer) : v.answer === 'clean';
 
@@ -339,18 +357,12 @@ async function triggerReveal(data) {
   });
   updates['state'] = 'reveal';
   updates['lastRoundScores'] = roundScores;
+  updates['lastRoundAnswers'] = answerCounts;
 
   await db.ref('rooms/' + roomId).update(updates);
 }
 
 // ====== ECRAN REVELATION ======
-const CATEGORY_LABELS = {
-  'VSS': 'VSS — Violences sexistes et sexuelles',
-  'pedocriminalite': 'Pédocriminalité',
-  'racisme': 'Racisme',
-  'delit/crime': 'Délit / crime'
-};
-
 function showRevealUI(data) {
   renderedRoundIndex = data.currentRoundIndex;
   const nom = data.roundOrder[data.currentRoundIndex];
@@ -364,17 +376,16 @@ function showRevealUI(data) {
   revealPhotoImg.classList.add('hidden');
   fetchWikipediaPhoto(item.nom).then(url => setPhoto(revealPhotoImg, url));
 
-  const badge = document.getElementById('category-badge');
-  badge.className = 'category-badge'; // reset
-  const cats = item.categorie ? item.categorie.split(',').map(c => c.trim()) : [];
-  if (cats.length > 0 && item.cancel === 'oui') {
-    const labels = cats.map(c => CATEGORY_LABELS[c] || c).join(' + ');
-    badge.textContent = labels;
-    const cssClass = 'cat-' + cats[0].replace('/', '-');
-    badge.classList.add(cssClass);
-  } else {
-    badge.classList.add('hidden');
-  }
+  const trueCats = item.categorie ? item.categorie.split(',').map(c => c.trim()) : [];
+  const counts = data.lastRoundAnswers || {};
+  ['VSS', 'pedocriminalite', 'delit/crime', 'racisme', 'clean'].forEach(key => {
+    const isCorrect = item.cancel === 'oui' ? trueCats.includes(key) : key === 'clean';
+    const el = document.querySelector(`#answer-reveal-grid [data-answer="${key}"]`);
+    el.classList.remove('correct', 'incorrect');
+    el.classList.add(isCorrect ? 'correct' : 'incorrect');
+    const countId = 'count-' + key.replace('/', '-');
+    document.getElementById(countId).textContent = counts[key] || 0;
+  });
 
   const ul = document.getElementById('round-scores');
   ul.innerHTML = '';
@@ -383,7 +394,7 @@ function showRevealUI(data) {
     .sort((a, b) => scores[b] - scores[a])
     .forEach(p => {
       const li = document.createElement('li');
-      li.innerHTML = `<span>${p}</span><span>+${scores[p]} pts</span>`;
+      li.innerHTML = `<span class="player-name-row">${renderAvatar(p)}${p}</span><span>+${scores[p]} pts</span>`;
       ul.appendChild(li);
     });
 
@@ -410,14 +421,32 @@ function showFinalUI(data) {
   const ul = document.getElementById('final-scores');
   ul.innerHTML = '';
   const players = data.players || {};
-  Object.keys(players)
-    .sort((a, b) => (players[b].score || 0) - (players[a].score || 0))
-    .forEach((p, i) => {
-      const li = document.createElement('li');
-      const medal = i === 0 ? '🥇 ' : i === 1 ? '🥈 ' : i === 2 ? '🥉 ' : '';
-      li.innerHTML = `<span>${medal}${p}</span><span>${players[p].score || 0} pts</span>`;
-      ul.appendChild(li);
+  const sorted = Object.keys(players).sort((a, b) => (players[b].score || 0) - (players[a].score || 0));
+  const maxScore = Math.max(1, ...sorted.map(p => players[p].score || 0));
+
+  sorted.forEach((p, i) => {
+    const li = document.createElement('li');
+    li.className = 'final-row';
+    const medal = i === 0 ? '🥇 ' : i === 1 ? '🥈 ' : i === 2 ? '🥉 ' : '';
+    const score = players[p].score || 0;
+    const pct = Math.round((score / maxScore) * 100);
+    li.innerHTML = `
+      <div class="final-row-top">
+        <span class="player-name-row">${medal}${renderAvatar(p)}${p}</span>
+        <span class="final-score">${score} pts</span>
+      </div>
+      <div class="final-bar-track"><div class="final-bar-fill" data-target="${pct}"></div></div>
+    `;
+    ul.appendChild(li);
+  });
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.final-bar-fill').forEach(bar => {
+        bar.style.width = bar.dataset.target + '%';
+      });
     });
+  });
 }
 
 document.getElementById('btn-replay').addEventListener('click', () => {

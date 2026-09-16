@@ -131,18 +131,76 @@ button {
 .room-label { color: var(--muted); font-size: 14px; }
 .room-label strong { color: var(--paper); }
 
-#players-list, #round-scores, #final-scores {
+#players-list, #round-scores {
   list-style: none;
   padding: 0;
   margin: 12px 0 20px;
 }
 
-#players-list li, #round-scores li, #final-scores li {
+#players-list li, #round-scores li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 9px 12px;
   border-bottom: 1px solid var(--paper-dim);
   font-size: 14px;
+}
+
+.player-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--paper);
+  flex-shrink: 0;
+}
+
+#final-scores {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 20px;
+}
+
+.final-row {
+  margin-bottom: 14px;
+}
+
+.final-row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.final-score {
+  font-family: var(--font-display);
+  font-size: 15px;
+}
+
+.final-bar-track {
+  height: 10px;
+  background: rgba(242,237,225,0.12);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.final-bar-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--red), var(--yellow));
+  transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hint { text-align: center; color: var(--muted); font-size: 13px; margin: 8px 0 0; flex: 0 0 auto; }
@@ -322,6 +380,38 @@ button {
 .answer-pill:disabled, .answer-clean:disabled { opacity: 0.35; }
 .answer-grid.hidden { display: none; }
 
+/* Mode revelation : repartition des reponses + bonne reponse en evidence */
+
+.answer-grid.reveal-mode .answer-pill,
+.answer-grid.reveal-mode .answer-clean {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pill-count {
+  background: rgba(20,16,15,0.4);
+  border-radius: 12px;
+  padding: 2px 9px;
+  font-size: 12px;
+  font-family: var(--font-body);
+  font-weight: 800;
+}
+
+.answer-grid.reveal-mode .correct {
+  box-shadow: 0 0 0 3px var(--clean-green), 0 0 18px rgba(63,110,74,0.7);
+  transform: scale(1.03);
+}
+
+.answer-grid.reveal-mode .correct .pill-label::after {
+  content: " ✓";
+}
+
+.answer-grid.reveal-mode .incorrect {
+  opacity: 0.32;
+}
+
 .waiting-others {
   flex: 0 0 auto;
   text-align: center;
@@ -340,23 +430,7 @@ button {
   overflow-y: auto;
 }
 
-.category-badge {
-  display: inline-block;
-  font-family: var(--font-display);
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  padding: 6px 14px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  color: var(--paper);
-}
-
-.category-badge.hidden { display: none; }
-
-.category-badge.cat-VSS { background: var(--cat-vss); }
-.category-badge.cat-pedocriminalite { background: var(--cat-pedo); }
-.category-badge.cat-racisme { background: var(--cat-racisme); }
-.category-badge.cat-delit-crime { background: var(--cat-crime); }
+.answer-grid.reveal-mode { margin-bottom: 12px; }
 
 .reveal-explication {
   text-align: left;
