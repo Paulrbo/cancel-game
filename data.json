@@ -450,9 +450,9 @@
   {
     "nom": "Mimie Mathy",
     "milieu": "Cinéma",
-    "cancel": "non",
-    "categorie": "",
-    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Bah elle soutient patrick bruel quoi."
   },
   {
     "nom": "Olivier Giroud",
@@ -688,9 +688,9 @@
   {
     "nom": "Patrick Bruel",
     "milieu": "Musique",
-    "cancel": "non",
-    "categorie": "",
-    "raison": "Figure appréciée du public, sans controverse majeure recensée."
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Bon on va pas vous faire un dessin, mais plus de 30 plaintes actuellement c'est pas rien quoi."
   },
   {
     "nom": "Christophe Maé",
@@ -1578,8 +1578,8 @@
     "nom": "Luc Besson",
     "milieu": "Cinéma",
     "cancel": "oui",
-    "categorie": "VSS",
-    "raison": "Accusé de viol par l'actrice Sand Van Roy en 2018, et de comportements inappropriés par huit autres femmes. Non-lieu rendu puis définitivement confirmé par la Cour de cassation en 2023."
+    "categorie": "VSS,pedocriminalite",
+    "raison": "Accusé de viol par l'actrice Sand Van Roy en 2018, et de comportements inappropriés par huit autres femmes. Non-lieu rendu puis définitivement confirmé par la Cour de cassation en 2023. Il a également eu une relation médiatisée avec Maïwenn (ils se sont mariés elle avait 15 ans et lui la trentaine donc bon...)"
   },
   {
     "nom": "Alain Soral",
@@ -1819,6 +1819,20 @@
     "categorie": "racisme",
     "raison": "A déclaré en 2005 au journal israélien Haaretz que l'équipe de France de football était devenue « black-black-black », provoquant un tollé. Une plainte pour incitation à la haine raciale a été déposée puis rejetée par la justice."
   },
+  {
+  "nom": "Rachida Dati",
+  "milieu": "Politique",
+  "cancel": "oui",
+  "categorie": "delit/crime",
+  "raison": "Jugée du 16 au 28 septembre 2026 pour corruption passive et trafic d'influence dans l'affaire Renault-Nissan, accusée d'avoir fait du lobbying au Parlement européen pour le compte de Carlos Ghosn en échange de 900 000 euros versés comme consultante entre 2010 et 2012. Le parquet national financier a requis contre elle quatre ans de prison dont deux ans fermes sous bracelet électronique, et cinq ans d'inéligibilité. Le jugement sera rendu le 21 janvier 2027."
+},
+  {
+  "nom": "Jordan Bardella",
+  "milieu": "Politique",
+  "cancel": "oui",
+  "categorie": "racisme",
+  "raison": "Mediapart a publié le 1er octobre 2026 des documents (témoignages, mails, conversations Messenger) qu'il présente comme authentifiant des propos antisémites tenus par Bardella dans sa jeunesse. Bardella conteste formellement, parle de « montages grossiers » et a engagé une procédure en diffamation contre le média, ainsi qu'une plainte pour faux et usage de faux. L'attribution reste disputée à ce jour."
+},
   {
     "nom": "Pascal Praud",
     "milieu": "TV/Journalisme",
