@@ -2,6 +2,8 @@
 const ROUND_DURATION_MS = 15000; // 15s pour repondre
 const SCORE_MAX = 1000;
 const SCORE_MIN = 100;
+const SCORE_PARTIAL_FACTOR = 0.5; // points gardés si "cancel" deviné juste mais mauvaise categorie
+const RANKING_ROW_HEIGHT = 48;
 let selectedRoundCount = 10;
 
 // ====== ETAT LOCAL ======
@@ -150,6 +152,11 @@ function onRoomUpdate(snapshot) {
       document.getElementById('round-count-selector').style.display = isHost ? 'block' : 'none';
       document.getElementById('waiting-hint').style.display = isHost ? 'none' : 'block';
       break;
+    case 'rules':
+      showScreen('screen-rules');
+      document.getElementById('btn-rules-continue').style.display = isHost ? 'block' : 'none';
+      document.getElementById('rules-hint').style.display = isHost ? 'none' : 'block';
+      break;
     case 'playing':
       showScreen('screen-round');
       if (renderedState !== 'playing' || renderedRoundIndex !== data.currentRoundIndex) {
@@ -208,12 +215,22 @@ document.getElementById('btn-start-game').addEventListener('click', async () => 
   const roundOrder = shuffle([...guaranteedOui, ...rest]).map(p => p.nom);
 
   await db.ref('rooms/' + roomId).update({
-    state: 'playing',
+    state: 'rules',
     currentRoundIndex: 0,
-    roundOrder,
-    roundStartTime: firebase.database.ServerValue.TIMESTAMP,
-    votes: null
+    roundOrder
   }).catch(err => showConnectionError(err));
+});
+
+document.getElementById('btn-rules-continue').addEventListener('click', async () => {
+  try {
+    await db.ref('rooms/' + roomId).update({
+      state: 'playing',
+      roundStartTime: firebase.database.ServerValue.TIMESTAMP,
+      votes: null
+    });
+  } catch (err) {
+    showConnectionError(err);
+  }
 });
 
 // ====== PHOTOS (via API Wikipedia, à la volée) ======
@@ -370,30 +387,56 @@ async function triggerReveal(data) {
     const trueCats = item.categorie ? item.categorie.split(',').map(s => s.trim()) : [];
 
     const roundScores = {};
-    const answerCounts = { 'VSS': 0, 'pedocriminalite': 0, 'delit_crime': 0, 'racisme': 0, 'clean': 0 };
+    const answerCounts = { 'VSS': 0, 'pedocriminalite': 0, 'delit_crime': 0, 'propos_haineux': 0, 'clean': 0 };
     for (const pseudo of Object.keys(players)) {
       const v = votes[pseudo];
       if (!v || !v.answer) { roundScores[pseudo] = 0; continue; }
       const countKey = v.answer === 'delit/crime' ? 'delit_crime' : v.answer;
       if (answerCounts.hasOwnProperty(countKey)) answerCounts[countKey]++;
 
-      const correct = item.cancel === 'oui' ? trueCats.includes(v.answer) : v.answer === 'clean';
-
       let score = 0;
-      if (correct) {
-        const frac = 1 - Math.min(1, v.timeTaken / ROUND_DURATION_MS);
-        score = Math.round(SCORE_MIN + (SCORE_MAX - SCORE_MIN) * frac);
+      if (item.cancel === 'oui') {
+        if (v.answer !== 'clean') {
+          // la personne est bien cancel : on a au moins deviné la bonne direction
+          const fullyCorrect = trueCats.includes(v.answer);
+          const frac = 1 - Math.min(1, v.timeTaken / ROUND_DURATION_MS);
+          const base = Math.round(SCORE_MIN + (SCORE_MAX - SCORE_MIN) * frac);
+          score = fullyCorrect ? base : Math.round(base * SCORE_PARTIAL_FACTOR);
+        }
+      } else {
+        if (v.answer === 'clean') {
+          const frac = 1 - Math.min(1, v.timeTaken / ROUND_DURATION_MS);
+          score = Math.round(SCORE_MIN + (SCORE_MAX - SCORE_MIN) * frac);
+        }
       }
       roundScores[pseudo] = score;
     }
 
+    // classement avant ce round (pour calculer qui monte/descend)
+    const prevSorted = Object.keys(players).sort((a, b) => (players[b].score || 0) - (players[a].score || 0));
+    const prevRankOf = {};
+    prevSorted.forEach((p, i) => { prevRankOf[p] = i; });
+
+    const newScores = {};
+    Object.keys(players).forEach(pseudo => {
+      newScores[pseudo] = (players[pseudo].score || 0) + (roundScores[pseudo] || 0);
+    });
+    const newSorted = Object.keys(newScores).sort((a, b) => newScores[b] - newScores[a]);
+    const overallRanking = newSorted.map((pseudo, i) => ({
+      pseudo,
+      score: newScores[pseudo],
+      gained: roundScores[pseudo] || 0,
+      delta: prevRankOf[pseudo] !== undefined ? prevRankOf[pseudo] - i : 0
+    }));
+
     const updates = {};
     Object.keys(players).forEach(pseudo => {
-      updates[`players/${pseudo}/score`] = (players[pseudo].score || 0) + (roundScores[pseudo] || 0);
+      updates[`players/${pseudo}/score`] = newScores[pseudo];
     });
     updates['state'] = 'reveal';
     updates['lastRoundScores'] = roundScores;
     updates['lastRoundAnswers'] = answerCounts;
+    updates['overallRanking'] = overallRanking;
 
     await db.ref('rooms/' + roomId).update(updates);
   } catch (err) {
@@ -424,7 +467,7 @@ function showRevealUI(data) {
 
   const trueCats = item.categorie ? item.categorie.split(',').map(c => c.trim()) : [];
   const counts = data.lastRoundAnswers || {};
-  ['VSS', 'pedocriminalite', 'delit/crime', 'racisme', 'clean'].forEach(key => {
+  ['VSS', 'pedocriminalite', 'delit/crime', 'propos_haineux', 'clean'].forEach(key => {
     const isCorrect = item.cancel === 'oui' ? trueCats.includes(key) : key === 'clean';
     const el = document.querySelector(`#answer-reveal-grid [data-answer="${key}"]`);
     el.classList.remove('correct', 'incorrect');
@@ -434,19 +477,48 @@ function showRevealUI(data) {
     document.getElementById(countId).textContent = counts[countKey] || 0;
   });
 
-  const ul = document.getElementById('round-scores');
-  ul.innerHTML = '';
-  const scores = data.lastRoundScores || {};
-  Object.keys(scores)
-    .sort((a, b) => scores[b] - scores[a])
-    .forEach(p => {
-      const li = document.createElement('li');
-      li.innerHTML = `<span class="player-name-row">${renderAvatar(p)}${p}</span><span>+${scores[p]} pts</span>`;
-      ul.appendChild(li);
-    });
+  renderOverallRanking(data.overallRanking || []);
 
   document.getElementById('btn-next-round').style.display = isHost ? 'block' : 'none';
   document.getElementById('reveal-hint').style.display = isHost ? 'none' : 'block';
+}
+
+function renderOverallRanking(ranking) {
+  const wrap = document.getElementById('overall-ranking');
+  wrap.innerHTML = '';
+  wrap.style.height = (ranking.length * RANKING_ROW_HEIGHT) + 'px';
+
+  ranking.forEach((r, newIndex) => {
+    const oldIndex = newIndex + (r.delta || 0); // position avant ce round
+    const row = document.createElement('div');
+    row.className = 'ranking-row';
+    row.style.transform = `translateY(${oldIndex * RANKING_ROW_HEIGHT}px)`;
+
+    const deltaAbs = Math.abs(r.delta || 0);
+    const deltaHtml = !r.delta
+      ? `<span class="rank-delta rank-delta-same">—</span>`
+      : r.delta > 0
+        ? `<span class="rank-delta rank-delta-up">▲${deltaAbs}</span>`
+        : `<span class="rank-delta rank-delta-down">▼${deltaAbs}</span>`;
+
+    row.innerHTML = `
+      <span class="rank-pos">${newIndex + 1}</span>
+      <span class="player-name-row">${renderAvatar(r.pseudo)}${r.pseudo}</span>
+      <span class="rank-gained">${r.gained > 0 ? '+' + r.gained : ''}</span>
+      ${deltaHtml}
+      <span class="rank-score">${r.score} pts</span>
+    `;
+    wrap.appendChild(row);
+  });
+
+  // anime chaque ligne de sa position precedente vers sa position finale (style Kahoot)
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      Array.from(wrap.children).forEach((row, i) => {
+        row.style.transform = `translateY(${i * RANKING_ROW_HEIGHT}px)`;
+      });
+    });
+  });
 }
 
 document.getElementById('btn-next-round').addEventListener('click', async () => {

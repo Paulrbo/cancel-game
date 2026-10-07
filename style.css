@@ -8,7 +8,7 @@
   --cat-vss: #4a3f52;
   --cat-pedo: #5c4a2e;
   --cat-crime: #33453f;
-  --cat-racisme: #5c3232;
+  --cat-haineux: #5c3232;
   --clean-green: #3a6b4a;
   --font-display: 'Anton', sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -33,6 +33,23 @@ body {
 }
 
 body.in-game .masthead { display: none; }
+
+.connection-error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--red);
+  color: var(--paper);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 14px;
+  padding-top: calc(10px + env(safe-area-inset-top, 0px));
+  text-align: center;
+}
+
+.connection-error.hidden { display: none; }
 
 .masthead {
   flex: 0 0 auto;
@@ -368,7 +385,7 @@ button {
 
 .answer-pill.cat-VSS { background: var(--cat-vss); }
 .answer-pill.cat-pedocriminalite { background: var(--cat-pedo); }
-.answer-pill.cat-racisme { background: var(--cat-racisme); }
+.answer-pill.cat-propos-haineux { background: var(--cat-haineux); }
 .answer-pill.cat-delit-crime { background: var(--cat-crime); }
 
 .answer-clean {
@@ -441,4 +458,139 @@ button {
   padding: 4px 0 4px 14px;
   border-left: 3px solid var(--paper-dim);
   font-style: italic;
+}
+
+/* ===== ECRAN REGLES ===== */
+
+.rules-intro {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--paper);
+  margin: 0 0 18px;
+}
+
+.rules-categories {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+
+.rules-categories li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--paper-dim);
+}
+
+.rules-categories li div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rules-categories li strong {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.rules-categories li span {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.rules-dot {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.rules-dot.cat-VSS { background: var(--cat-vss); }
+.rules-dot.cat-pedocriminalite { background: var(--cat-pedo); }
+.rules-dot.cat-propos-haineux { background: var(--cat-haineux); }
+.rules-dot.cat-delit-crime { background: var(--cat-crime); }
+.rules-dot.cat-clean { background: var(--clean-green); }
+
+.rules-scoring {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--paper-dim);
+  margin: 0 0 20px;
+  padding: 12px 14px;
+  border: 2px solid var(--paper-dim);
+  border-radius: 8px;
+}
+
+/* ===== CLASSEMENT GENERAL ANIME (ecran revelation) ===== */
+
+.ranking-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin: 4px 0 8px;
+  color: var(--paper-dim);
+}
+
+.ranking-list {
+  position: relative;
+}
+
+.ranking-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  background: rgba(242, 237, 225, 0.05);
+  border-radius: 8px;
+  font-size: 13px;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rank-pos {
+  flex: 0 0 auto;
+  width: 20px;
+  font-family: var(--font-display);
+  color: var(--paper-dim);
+  font-size: 14px;
+  text-align: center;
+}
+
+.ranking-row .player-name-row { flex: 1; min-width: 0; }
+.ranking-row .player-name-row { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.rank-gained {
+  flex: 0 0 auto;
+  color: var(--yellow);
+  font-size: 12px;
+  font-weight: 800;
+  min-width: 34px;
+  text-align: right;
+}
+
+.rank-delta {
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 800;
+  min-width: 28px;
+  text-align: center;
+}
+
+.rank-delta-up { color: var(--clean-green); }
+.rank-delta-down { color: var(--red); }
+.rank-delta-same { color: var(--muted); }
+
+.rank-score {
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-size: 14px;
+  min-width: 56px;
+  text-align: right;
 }

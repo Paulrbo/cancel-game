@@ -13,6 +13,8 @@
 </head>
 <body>
 
+<div id="connection-error" class="connection-error hidden"></div>
+
 <div class="masthead" id="masthead">
   <h1>CANCEL <span>?</span></h1>
   <p class="kicker">le jeu qui teste ta culture des scandales</p>
@@ -66,6 +68,25 @@
     <p class="hint" id="waiting-hint">En attente que l'hôte lance la partie…</p>
   </section>
 
+  <!-- ECRAN 3bis : RAPPEL DES REGLES -->
+  <section id="screen-rules" class="screen screen-form">
+    <h2>Règles du jeu</h2>
+    <p class="rules-intro">Pour chaque personnalité, vous avez <strong>15 secondes</strong> pour deviner si elle est <strong>CANCEL</strong> — et dans quelle catégorie — ou <strong>CLEAN</strong>.</p>
+
+    <ul class="rules-categories">
+      <li><span class="rules-dot cat-VSS"></span><div><strong>VSS</strong><span>Violences sexuelles et sexistes (agressions, viols, harcèlement…)</span></div></li>
+      <li><span class="rules-dot cat-pedocriminalite"></span><div><strong>Pédocriminalité</strong><span>Abus ou agressions sur mineur·e·s</span></div></li>
+      <li><span class="rules-dot cat-propos-haineux"></span><div><strong>Propos haineux</strong><span>Racisme, discrimination, discours de haine</span></div></li>
+      <li><span class="rules-dot cat-delit-crime"></span><div><strong>Délit / crime</strong><span>Corruption, fraude, violence hors cadre sexuel, autres délits</span></div></li>
+      <li><span class="rules-dot cat-clean"></span><div><strong>CLEAN</strong><span>Pas de scandale connu pour cette personnalité</span></div></li>
+    </ul>
+
+    <p class="rules-scoring">⏱️ Plus vous répondez vite, plus vous gagnez de points (jusqu'à 1000).<br>🎯 Trouver la bonne catégorie rapporte le maximum de points.<br>👍 Deviner juste que c'est <strong>cancel</strong>, même avec la mauvaise catégorie, rapporte quand même des points (moitié moins).</p>
+
+    <button id="btn-rules-continue" class="btn-primary">C'est parti</button>
+    <p class="hint" id="rules-hint">En attente de l'hôte pour lancer la 1ère manche…</p>
+  </section>
+
   <!-- ECRAN 4 : ROUND EN COURS -->
   <section id="screen-round" class="screen">
     <div class="stage">
@@ -86,7 +107,7 @@
           <button class="answer-pill cat-VSS" data-answer="VSS">VSS</button>
           <button class="answer-pill cat-pedocriminalite" data-answer="pedocriminalite">Pédocriminalité</button>
           <button class="answer-pill cat-delit-crime" data-answer="delit/crime">Délit / crime</button>
-          <button class="answer-pill cat-racisme" data-answer="racisme">Racisme</button>
+          <button class="answer-pill cat-propos-haineux" data-answer="propos_haineux">Propos haineux</button>
         </div>
         <button class="answer-clean" data-answer="clean">CLEAN</button>
       </div>
@@ -122,9 +143,9 @@
               <span class="pill-label">Délit / crime</span>
               <span class="pill-count" id="count-delit-crime">0</span>
             </div>
-            <div class="answer-pill cat-racisme" data-answer="racisme">
-              <span class="pill-label">Racisme</span>
-              <span class="pill-count" id="count-racisme">0</span>
+            <div class="answer-pill cat-propos-haineux" data-answer="propos_haineux">
+              <span class="pill-label">Propos haineux</span>
+              <span class="pill-count" id="count-propos_haineux">0</span>
             </div>
           </div>
           <div class="answer-clean" data-answer="clean">
@@ -133,7 +154,8 @@
           </div>
         </div>
         <blockquote class="reveal-explication" id="reveal-explication">—</blockquote>
-        <ul id="round-scores"></ul>
+        <p class="ranking-title">Classement général</p>
+        <div id="overall-ranking" class="ranking-list"></div>
       </div>
 
       <button id="btn-next-round" class="btn-primary">Round suivant</button>

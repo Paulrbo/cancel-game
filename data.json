@@ -1564,7 +1564,7 @@
     "nom": "Éric Zemmour",
     "milieu": "Politique",
     "cancel": "oui",
-    "categorie": "racisme",
+    "categorie": "propos_haineux",
     "raison": "Condamné à plusieurs reprises pour provocation à la haine raciale et injures racistes, notamment pour avoir qualifié des mineurs étrangers de « voleurs, violeurs, assassins »."
   },
   {
@@ -1585,7 +1585,7 @@
     "nom": "Alain Soral",
     "milieu": "Media/Web",
     "cancel": "oui",
-    "categorie": "racisme",
+    "categorie": "propos_haineux",
     "raison": "Condamné à de nombreuses reprises pour antisémitisme, négationnisme et provocation à la haine raciale, ainsi que pour apologie du terrorisme en 2026."
   },
   {
@@ -1641,7 +1641,7 @@
     "nom": "Kanye West",
     "milieu": "Musique",
     "cancel": "oui",
-    "categorie": "racisme",
+    "categorie": "propos_haineux",
     "raison": "Auteur de nombreuses déclarations et publications antisémites répétées, ayant entraîné la rupture de plusieurs contrats commerciaux majeurs."
   },
   {
@@ -1655,7 +1655,7 @@
     "nom": "Brigitte Bardot",
     "milieu": "Cinéma",
     "cancel": "oui",
-    "categorie": "racisme",
+    "categorie": "propos_haineux",
     "raison": "Condamnée à plusieurs reprises par la justice française pour incitation à la haine raciale, à propos de ses propos sur l'islam et l'immigration."
   },
   {
@@ -1732,7 +1732,7 @@
     "nom": "Dieudonné",
     "milieu": "Humour",
     "cancel": "oui",
-    "categorie": "racisme",
+    "categorie": "propos_haineux",
     "raison": "Condamné plus d'une douzaine de fois par les justices française, belge, suisse et canadienne pour provocation à la haine raciale, injures antisémites et négationnisme."
   },
   {
@@ -1816,35 +1816,35 @@
     "nom": "Alain Finkielkraut",
     "milieu": "Media/Web",
     "cancel": "oui",
-    "categorie": "racisme",
+    "categorie": "propos_haineux",
     "raison": "A déclaré en 2005 au journal israélien Haaretz que l'équipe de France de football était devenue « black-black-black », provoquant un tollé. Une plainte pour incitation à la haine raciale a été déposée puis rejetée par la justice."
   },
   {
-  "nom": "Rachida Dati",
-  "milieu": "Politique",
-  "cancel": "oui",
-  "categorie": "delit/crime",
-  "raison": "Jugée du 16 au 28 septembre 2026 pour corruption passive et trafic d'influence dans l'affaire Renault-Nissan, accusée d'avoir fait du lobbying au Parlement européen pour le compte de Carlos Ghosn en échange de 900 000 euros versés comme consultante entre 2010 et 2012. Le parquet national financier a requis contre elle quatre ans de prison dont deux ans fermes sous bracelet électronique, et cinq ans d'inéligibilité. Le jugement sera rendu le 21 janvier 2027."
-},
+    "nom": "Rachida Dati",
+    "milieu": "Politique",
+    "cancel": "oui",
+    "categorie": "delit/crime",
+    "raison": "Jugée du 16 au 28 septembre 2026 pour corruption passive et trafic d'influence dans l'affaire Renault-Nissan, accusée d'avoir fait du lobbying au Parlement européen pour le compte de Carlos Ghosn en échange de 900 000 euros versés comme consultante entre 2010 et 2012. Le parquet national financier a requis contre elle quatre ans de prison dont deux ans fermes sous bracelet électronique, et cinq ans d'inéligibilité. Le jugement sera rendu le 21 janvier 2027."
+  },
   {
-  "nom": "Jordan Bardella",
-  "milieu": "Politique",
-  "cancel": "oui",
-  "categorie": "racisme",
-  "raison": "Mediapart a publié le 1er octobre 2026 des documents (témoignages, mails, conversations Messenger) qu'il présente comme authentifiant des propos antisémites tenus par Bardella dans sa jeunesse. Bardella conteste formellement, parle de « montages grossiers » et a engagé une procédure en diffamation contre le média, ainsi qu'une plainte pour faux et usage de faux. L'attribution reste disputée à ce jour."
-},
+    "nom": "Jordan Bardella",
+    "milieu": "Politique",
+    "cancel": "oui",
+    "categorie": "propos_haineux",
+    "raison": "Mediapart a publié le 1er octobre 2026 des documents (témoignages, mails, conversations Messenger) qu'il présente comme authentifiant des propos antisémites tenus par Bardella dans sa jeunesse. Bardella conteste formellement, parle de « montages grossiers » et a engagé une procédure en diffamation contre le média, ainsi qu'une plainte pour faux et usage de faux. L'attribution reste disputée à ce jour."
+  },
   {
     "nom": "Pascal Praud",
     "milieu": "TV/Journalisme",
     "cancel": "oui",
-    "categorie": "racisme",
+    "categorie": "propos_haineux",
     "raison": "Visé à plusieurs reprises par des plaintes pour propos jugés racistes sur CNews, notamment en 2023 en suggérant un lien entre l'immigration et une invasion de punaises de lit, puis en 2026 en commentant la couleur de peau de manifestants face aux forces de l'ordre."
   },
   {
     "nom": "Jean Messiha",
     "milieu": "Politique",
     "cancel": "oui",
-    "categorie": "racisme",
+    "categorie": "propos_haineux",
     "raison": "Polémiste d'extrême droite visé par plusieurs plaintes pour des propos islamophobes et racistes, notamment en juillet 2026 après une publication moquant des femmes en burkini photographiées sans leur consentement."
   },
   {
@@ -1865,7 +1865,7 @@
     "nom": "Booba",
     "milieu": "Musique",
     "cancel": "oui",
-    "categorie": "delit/crime,racisme",
+    "categorie": "delit/crime,propos_haineux",
     "raison": "Mis en examen à plusieurs reprises pour harcèlement moral aggravé, notamment après des plaintes de l'agente Magali Berdah puis du couple formé par le rappeur Gims et sa compagne. Également jugé pour injures racistes et cyberharcèlement envers une journaliste et un essayiste."
   },
   {
@@ -1907,7 +1907,28 @@
     "nom": "Patrick Sébastien",
     "milieu": "TV/Animation",
     "cancel": "oui",
-    "categorie": "racisme",
+    "categorie": "propos_haineux",
     "raison": "Condamné en mars 1996 par le tribunal correctionnel de Paris à une amende pour incitation à la haine raciale, après la diffusion sur TF1 d'un sketch intitulé « Casser du Noir », parodiant Jean-Marie Le Pen."
+  },
+  {
+    "nom": "Doums",
+    "milieu": "Rappeur (collectif L'Entourage)",
+    "cancel": "oui",
+    "categorie": "VSS",
+    "raison": "Condamné le 2 février 2026 par le tribunal correctionnel de Créteil à 8 mois de prison avec sursis probatoire pour des violences commises sur sa compagne actuelle, mère de deux de ses enfants. Les faits jugés remontent au 11 janvier, la victime ayant également dénoncé des épisodes en 2022, 2023 et 2024. Le parquet avait requis 20 mois d'emprisonnement. Doums a contesté l'essentiel des faits, ne reconnaissant qu'un crachat. Il fait par ailleurs l'objet d'une plainte distincte déposée en octobre 2024 par l'actrice Adèle Exarchopoulos, son ex-compagne, pour des violences conjugales qu'elle situe entre 2017 et 2024 ; le procès correspondant a été renvoyé à février 2027."
+  },
+  {
+    "nom": "Patrick Balkany",
+    "milieu": "Homme politique (ancien maire de Levallois-Perret)",
+    "cancel": "oui",
+    "categorie": "delit/crime",
+    "raison": "Condamné en 2019 à 4 ans de prison (dont 2 ans ferme) pour fraude fiscale et blanchiment de fraude fiscale, après la découverte de comptes et de biens non déclarés à l'étranger (notamment une villa aux Antilles). Incarcéré dès septembre 2019. Dans une autre procédure liée à des marchés publics truqués à Levallois-Perret, il a été relaxé du chef de corruption mais condamné pour blanchiment. Sa peine a ensuite été aggravée en appel, avec un retour en détention en février 2022. Son épouse Isabelle Balkany a également été condamnée dans le même dossier."
+  },
+  {
+    "nom": "J.K. Rowling",
+    "milieu": "Écrivaine (saga Harry Potter)",
+    "cancel": "oui",
+    "categorie": "propos_haineux",
+    "raison": "Accusée de transphobie après de nombreuses prises de position publiques contre l'inclusion des personnes transgenres dans les espaces et compétitions réservés aux femmes, à partir de 2020. A rompu publiquement avec plusieurs acteurs de la saga Harry Potter, dont Daniel Radcliffe et Emma Watson, après leur soutien aux personnes trans, déclarant ne pas vouloir leur pardonner. Multiplie depuis les prises de position jugées transphobes par une partie du public et des associations LGBT+, tout en se présentant elle-même comme défenseure des droits des femmes."
   }
 ]
